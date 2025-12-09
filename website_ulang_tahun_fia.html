@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ucapan Ulang Tahun dari Fia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+    }
+    .date {
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .heart-box {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .heart-box div {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid gold;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .letters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .letter-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #444;
+      padding: 15px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .letter-btn:hover {
+      transform: scale(1.05);
+      border-color: gold;
+    }
+
+    .letter-content {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid gold;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    audio {
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid gold;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Untuk Lelakiku — Selamat Ulang Tahun</h1>
+    <div class="date">10122002 - 10122025 dari fia untuk kamu</div>
+
+    <audio controls loop>
+      <source src="bergema-sampai-selamanya.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="message-box">
+      <h2 style="color: gold;">Ucapan Ulang Tahun Dari Fia</h2>
+      <p>
+        Selamat ulang tahun, sayang. Di hari istimewa ini, aku ingin kamu tahu betapa berharganya kamu dalam hidupku. Kamu itu rumah, ketenangan, dan kejutan manis yang tidak pernah aku duga datangnya. Bersamamu, setiap detik terasa lebih lembut, setiap mimpi terasa lebih mungkin, dan setiap langkah terasa lebih ringan.<br><br>
+        Terima kasih sudah hadir dengan cara yang paling indah—bukan dengan gemuruh, tapi dengan ketulusan yang membuatku jatuh cinta setiap hari. Kamu adalah alasan kenapa hatiku semakin yakin, kenapa aku lebih berani, dan kenapa aku ingin masa depan yang panjang. Semoga tahunmu dipenuhi kebahagiaan yang tak putus, keberkahan yang tidak habis, dan cinta yang selalu menemukan jalannya kembali padamu.<br><br>
+        Tidak ada kata yang cukup untuk menggambarkan betapa spesialnya kamu. Tapi hari ini, izinkan aku merayakan kamu—lelaki yang membuat hidupku lebih hidup, lebih indah, dan lebih penuh rasa. Selamat ulang tahun, cinta.
+      </p>
+    </div>
+
+    <div class="heart-box">
+      <div>
+        <div style="font-size: 50px;">❤️</div>
+        <p>Untukmu, sayang</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; color:#ccc;">Klik nomor untuk membuka surat.</p>
+
+    <div class="letters-grid">
+      <!-- 10 letters -->
+      <script>
+        const letters = [
+          "Kamu membuat hari-hariku lebih ringan — tersenyum karena keberadaanmu adalah kebiasaan manis setiap pagi.",
+          "Kamu mendengar tanpa menghakimi; hatiku merasa aman membuka diri padamu.",
+          "Kamu membuatku ingin menjadi versi terbaik karena kamu percaya padaku.",
+          "Sentuhanmu selalu terasa seperti rumah—hangat dan penuh cinta.",
+          "Kamu mengerti aku bahkan tanpa kata.",
+          "Canda kita selalu jujur dan bikin nagih.",
+          "Kamu mendukung semua mimpiku.",
+          "Kamu sabar meski aku sering rapuh.",
+          "Tatapanmu bikin aku merasa berarti.",
+          "Denganmu, cinta terasa abadi dan sederhana." 
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const grid = document.querySelector('.letters-grid');
+
+          letters.forEach((text, i) => {
+            const btn = document.createElement('div');
+            btn.className = 'letter-btn';
+            btn.innerHTML = `<b>Surat ${i+1}</b>`;
+
+            const content = document.createElement('div');
+            content.className = 'letter-content';
+            content.innerText = text;
+
+            btn.addEventListener('click', () => {
+              content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+
+            grid.appendChild(btn);
+            grid.appendChild(content);
+          });
+        });
+      </script>
+    </div>
+
+  </div>
+</body>
+</html>
